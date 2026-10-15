@@ -113,10 +113,42 @@ def main(limit=None):
         json.dump(products, f, ensure_ascii=False, indent=2)
     logging.info(f"Saved {len(products)} products to {path}")
     return str(path)
+def retry_failed():
+    """بتعيد سحب الكتب اللي فشلت (من logs/scraper.log) وبتضيفها لملف النهاردة."""
+    setup_logging()
+    path = RAW_DIR / f"products_{date.today().isoformat()}.json"
+    products = json.loads(path.read_text(encoding="utf-8"))
+    done = {p["product_url"] for p in products}
 
+    log_text = (LOG_DIR / "scraper.log").read_text(encoding="utf-8")
+    failed = {
+        line.split("FAILED: ")[1].split(" - ")[0]
+        for line in log_text.splitlines()
+        if "FAILED: " in line
+    }
+    todo = sorted(failed - done)       # الفاشل اللي لسه ما اتسحبش
+    logging.info(f"Retrying {len(todo)} failed products")
+
+    still_failed = 0
+    for i, url in enumerate(todo, 1):
+        try:
+            products.append(scrape_product(url))
+            logging.info(f"[retry {i}/{len(todo)}] OK: {url}")
+        except Exception as e:
+            still_failed += 1
+            logging.error(f"[retry {i}/{len(todo)}] FAILED AGAIN: {url} - {e}")
+        time.sleep(DELAY)
+
+    path.write_text(json.dumps(products, ensure_ascii=False, indent=2), encoding="utf-8")
+    logging.info(f"Now {len(products)} products in {path} ({still_failed} still failing)")
+    return str(path)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=None, help="اسحبي عدد محدد بس (للتجربة)")
+    parser.add_argument("--retry-failed", action="store_true", help="أعيدي سحب الكتب الفاشلة بس")
     args = parser.parse_args()
-    main(limit=args.limit)
+    if args.retry_failed:
+        retry_failed()
+    else:
+        main(limit=args.limit)
