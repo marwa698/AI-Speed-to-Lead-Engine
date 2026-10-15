@@ -1,0 +1,92 @@
+[
+  {
+    "product_name": "A Light in the Attic",
+    "category": "Poetry",
+    "price": "£51.77",
+    "rating": "Three",
+    "availability": "In stock (22 available)",
+    "product_url": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+    "scraped_at": "2026-10-15T12:25:02"
+  },
+  {
+    "product_name": "Tipping the Velvet",
+    "category": "Historical Fiction",
+    "price": "£53.74",
+    "rating": "One",
+    "availability": "In stock (20 available)",
+    "product_url": "https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html",
+    "scraped_at": "2026-10-15T12:25:16"
+  },
+  {
+    "product_name": "Soumission",
+    "category": "Fiction",
+    "price": "£50.10",
+    "rating": "One",
+    "availability": "In stock (20 available)",
+    "product_url": "https://books.toscrape.com/catalogue/soumission_998/index.html",
+    "scraped_at": "2026-10-15T12:25:21"
+  },
+  {
+    "product_name": "Sharp Objects",
+    "category": "Mystery",
+    "price": "£47.82",
+    "rating": "Four",
+    "availability": "In stock (20 available)",
+    "product_url": "https://books.toscrape.com/catalogue/sharp-objects_997/index.html",
+    "scraped_at": "2026-10-15T12:25:30"
+  },
+  {
+    "product_name": "Sapiens: A Brief History of Humankind",
+    "category": "History",
+    "price": "£54.23",
+    "rating": "Five",
+    "availability": "In stock (20 available)",
+    "product_url": "https://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html",
+    "scraped_at": "2026-10-15T12:25:38"
+  },
+  {
+    "product_name": "The Requiem Red",
+    "category": "Young Adult",
+    "price": "£22.65",
+    "rating": "One",
+    "availability": "In stock (19 available)",
+    "product_url": "https://books.toscrape.com/catalogue/the-requiem-red_995/index.html",
+    "scraped_at": "2026-10-15T12:25:44"
+  },
+  {
+    "product_name": "The Dirty Little Secrets of Getting Your Dream Job",
+    "category": "Business",
+    "price": "£33.34",
+    "rating": "Four",
+    "availability": "In stock (19 available)",
+    "product_url": "https://books.toscrape.com/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html",
+    "scraped_at": "2026-10-15T12:25:48"
+  },
+  {
+    "product_name": "The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull",
+    "category": "Default",
+    "price": "£17.93",
+    "rating": "Three",
+    "availability": "In stock (19 available)",
+    "product_url": "https://books.toscrape.com/catalogue/the-coming-woman-a-novel-based-on-the-life-of-the-infamous-feminist-victoria-woodhull_993/index.html",
+    "scraped_at": "2026-10-15T12:25:56"
+  },
+  {
+    "product_name": "The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics",
+    "category": "Default",
+    "price": "£22.60",
+    "rating": "Four",
+    "availability": "In stock (19 available)",
+    "product_url": "https://books.toscrape.com/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html",
+    "scraped_at": "2026-10-15T12:26:03"
+  },
+  {
+    "product_name": "The Black Maria",
+    "category": "Poetry",
+    "price": "£52.15",
+    "rating": "One",
+    "availability": "In stock (19 available)",
+    "product_url": "https://books.toscrape.com/catalogue/the-black-maria_991/index.html",
+    "scraped_at": "2026-10-15T12:26:11"
+  }
+]
