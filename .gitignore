@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Secrets (ممنوع يترفع)
+.env
+
+# Project
+logs/
+data/raw/*.json
+data/processed/*.csv
+data/rejected/*.csv
+!data/raw/sample_products.json
+
+# Editor
+.vscode/

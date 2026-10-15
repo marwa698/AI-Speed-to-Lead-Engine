@@ -1,0 +1,11 @@
+requests
+beautifulsoup4
+lxml
+tenacity
+pandas
+rapidfuzz
+sqlalchemy
+psycopg2-binary
+python-dotenv
+streamlit
+plotly
